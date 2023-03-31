@@ -8,4 +8,4 @@ I want calender the gets quotes and gifs from game of throne characters
 
 # Link
 
-![screenshot] (Assets/
+![screenshot] (Quotes-of-Thrones\assets\img\qot.png)
