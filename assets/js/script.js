@@ -27,6 +27,7 @@ searchBtn.addEventListener("click", function () {
         })
 });
 
+
 searchBtn.addEventListener("click", function () {
 
     fetch('https://api.gameofthronesquotes.xyz/v1/author/tywin/2')
