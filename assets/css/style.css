@@ -1,0 +1,15 @@
+html{
+    background-color: rgba(32, 35, 53, 0.889);
+}
+
+#mainHeader{
+    font-family:monospace;
+    color: rgb(174, 121, 185);
+}
+#monday,#tuesday,#wednesday,#thursday,#friday,#saturday,#sunday{
+    background-color: rgb(133, 133, 201);
+}
+
+#generateGif:hover{
+    background-color: rgb(167, 167, 199);
+}
