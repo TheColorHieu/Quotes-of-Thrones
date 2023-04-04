@@ -1,6 +1,6 @@
-// API
-//quotes url = https://api.gameofthronesquotes.xyz/v1/author/tyrion/2
-//giphy key = XdKAq0Iih87Sx83LInGdrQgoMit3ALUH
+var giphykey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
+const searchBtn = document.getElementById("generateGif");
+const Character = document.getElementById();
 
 //const Character = document.getElementById();
 const tyrion = 'https://api.gameofthronesquotes.xyz/v1/author/tyrion/2'
@@ -13,7 +13,16 @@ const Cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 //FLAGS
 
 //Event listerners
-searchBtn.addEventListener('click')
+searchBtn.addEventListener("click", function () {
+
+    fetch('https://api.gameofthronesquotes.xyz/v1/author/tyrion/2')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+});
 
 
 
