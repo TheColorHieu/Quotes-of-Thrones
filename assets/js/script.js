@@ -15,11 +15,14 @@
 //Arya = https://api.gameofthronesquotes.xyz/v1/author/
 //Peter Balish = https://api.gameofthronesquotes.xyz/v1/author/
 //FLAGS
-
 //Event listerners
-searchBtn.addEventListener('click')
 
-//function getcharacter(){
+$("#b1,#b2,#b3,#b4,#b5,#b6,#b7").bind("click",function(){
+    console.log("clicky clacky");
+
+})
+
+//function getCharacter(){
 
 //fetch()
 
