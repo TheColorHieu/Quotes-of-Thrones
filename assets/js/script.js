@@ -21,9 +21,4 @@ searchBtn.addEventListener("click", function () {
         })
 });
 
-
-
-
-
-
 //Console.log
