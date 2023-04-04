@@ -16,69 +16,76 @@ const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const Cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
 //Event Listener
-searchBtn.addEventListener("click", function () {
+$("#generateGif").on("click",function(){
+    fetch(tyrion)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    })
+}) 
 
-    fetch('https://api.gameofthronesquotes.xyz/v1/author/tyrion/2')
+$("#generateGif").on("click",function(){
+    fetch(Tywin)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    })
+}) 
+
+$("#generateGif").on("click",function(){
+    fetch(Arya)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    })
+}) 
+
+$("#generateGif").on("click",function(){
+    fetch(jon)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
         })
-});
+}) 
 
-
-searchBtn.addEventListener("click", function () {
-
-    fetch('https://api.gameofthronesquotes.xyz/v1/author/tywin/2')
+$("#generateGif").on("click",function(){
+    fetch(jaime)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
         })
-});
+}) 
 
-searchBtn.addEventListener("click", function () {
-
-    fetch('https://api.gameofthronesquotes.xyz/v1/author/arya/2')
+$("#generateGif").on("click",function(){
+    fetch(Cersei)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
         })
-});
+}) 
 
-searchBtn.addEventListener("click", function () {
-
-    fetch('https://api.gameofthronesquotes.xyz/v1/author/jon/2')
+$("#generateGif").on("click",function(){
+    fetch(daenerys)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data);
         })
-});
-searchBtn.addEventListener("click", function () {
+}) 
 
-    fetch('https://api.gameofthronesquotes.xyz/v1/author/jaime/2')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-});
-searchBtn.addEventListener("click", function () {
 
-    fetch('https://api.gameofthronesquotes.xyz/v1/author/cersei/2')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-});
 
 //Console.log
