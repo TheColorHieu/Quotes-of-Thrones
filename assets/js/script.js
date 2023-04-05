@@ -51,6 +51,7 @@ $("#wednesdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             daenerysQuote.textContent = quote;
+            localStorage.setItem('daenerysQuote', quote);
         })
         .then(function (data) {
             console.log(data);
