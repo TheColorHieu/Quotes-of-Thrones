@@ -1,4 +1,4 @@
-var giphykey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
+//var giphykey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
 const tyrionQuote = document.querySelector('#tyrionQuote');
 const tywinQuote = document.querySelector('#tywinQuote');
@@ -149,8 +149,6 @@ function init(){
         //prevent from the page to reload 
         event.preventDefault();
         let url = 'https://api.giphy.com/v1/gifs/search?api_key=${giphykey}&limit=1q=';
-        let str = document.getElementById("search").value.trim();
-        url = url.concat(str);
         console.log(url);
         fetch(url)
         .then(response => response.json() )
@@ -158,6 +156,17 @@ function init(){
          //data that we are trying to retrieve 
          console.log(content.data)    
          console.let('META', content.meta)
+        //creating the html cards so that we can then append 
+        let fig = document.createElement('figure');
+        let img = document.createElement('img');
+        let fc = document.createElement('figcaption');
+        img.src = content.data[0].images.downsized.url;
+        img.alt = content.data[0].title;
+        fig.appendChild(img);
+        fig.appendChild(fc);
+        //need to change where we going to append it 
+        let out = document.querySelector('.out');
+        out.insertAdjacentElement('afterbegin', fig);
         })
        
         .catch(error =>{
