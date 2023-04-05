@@ -72,7 +72,7 @@ $("#wednesdayBtn").on("click", function (event) {
 
 const savedQuote3 = localStorage.getItem('jonQuote')
 if (savedQuote3) {
-    tywinQuote.textContent = savedQuote3;
+    jonQuote.textContent = savedQuote3;
 } 
 $("#thursdayBtn").on("click", function (event) {
     event.preventDefault();
@@ -90,7 +90,7 @@ $("#thursdayBtn").on("click", function (event) {
 
 const savedQuote4 = localStorage.getItem('aryaQuote')
 if (savedQuote4) {
-    tywinQuote.textContent = savedQuote4;
+    aryaQuote.textContent = savedQuote4;
 } 
 $("#fridayBtn").on("click", function (event) {
     event.preventDefault();
@@ -108,7 +108,7 @@ $("#fridayBtn").on("click", function (event) {
 
 const savedQuote5 = localStorage.getItem('jaimeQuote')
 if (savedQuote5) {
-    tywinQuote.textContent = savedQuote5;
+    jaimeQuote.textContent = savedQuote5;
 } 
 $("#saturdayBtn").on("click", function (event) {
     event.preventDefault();
@@ -126,7 +126,7 @@ $("#saturdayBtn").on("click", function (event) {
 
 const savedQuote6 = localStorage.getItem('cerseiQuote')
 if (savedQuote6) {
-    tywinQuote.textContent = savedQuote6;
+    cerseiQuote.textContent = savedQuote6;
 } 
 $("#sundayBtn").on("click", function (event) {
     event.preventDefault();
