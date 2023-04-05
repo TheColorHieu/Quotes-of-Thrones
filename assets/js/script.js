@@ -39,7 +39,7 @@ $("#tuesdayBtn").on("click",function(){
     })
 }) 
 
-$("#wendnesdayBtn").on("click",function(){
+$("#wednesdayBtn").on("click",function(){
     fetch(arya)
     .then(function (response) {
         return response.json();
@@ -92,3 +92,6 @@ $("#sundayBtn").on("click",function(){
 
 
 //Console.log
+
+
+//quote content
