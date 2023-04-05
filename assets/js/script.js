@@ -20,7 +20,6 @@ const savedQuote = localStorage.getItem('tyrionQuote')
 if (savedQuote) {
     tyrionQuote.textContent = savedQuote;
 } 
-//Event Listener
 $("#mondayBtn").on("click", function (event) {
     event.preventDefault();
     fetch(tyrion)
@@ -35,7 +34,12 @@ $("#mondayBtn").on("click", function (event) {
         })
 });
 
+const savedQuote1 = localStorage.getItem('tywinQuote')
+if (savedQuote1) {
+    tywinQuote.textContent = savedQuote;
+} 
 $("#tuesdayBtn").on("click", function () {
+    event.preventDefault();
     fetch(tywin)
         .then(response => response.json())
         .then(data => {
