@@ -172,23 +172,49 @@ $("#sundayBtn").on("click", function (event) {
 //             console.error(error);
 //         });
 //     })
-//}
-function fetchGiphyByCharacter(apiKey, tyrion) {
-    const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=Game of Thrones ${tyrion}&limit=1`;
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        // Get a random Giphy from the API data
-        const randomIndex = Math.floor(Math.random() * data.data.length);
-        const randomGiphy = data.data[randomIndex];
+// }
+// function fetchGiphyByCharacter(apiKey, tyrion) {
+//     document.getElementById("mondayBtn").addEventListener("click", event => {
+//     const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=Game of Thrones ${tyrion}&limit=1`;
+//     fetch(apiUrl)
+//         .then(response => response.json())
+//         .then(data => {
+//             // Get a random Giphy from the API data
+//             const randomIndex = Math.floor(Math.random() * data.data.length);
+//             const randomGiphy = data.data[randomIndex];
+//             const gifUrl = data.data.images.original.url;
+//             const gifContainer = document.getElementById('gif-container');
+//             const img = document.createElement('img');
+//             img.src = gifUrl;
+//             gifContainer.appendChild(img);
+//         })
+//         .catch(error => console.error(error));
   
-        // Do something with the random Giphy
-        console.log(randomGiphy);
-      })
-      .catch(error => {
-        console.error('Error fetching Giphy', error);
-      });
-  }
+//         // Do something with the random Giphy
+//         console.log(randomGiphy);
+//       })
+//       .catch(error => {
+//         console.error('Error fetching Giphy', error);
+//       });
+//     }
+
+//trying to make it with jquery 
+$.ajax({
+url:'https://api.giphy.com/v1/gifs/search?q=game+of+thrones+characters&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+success : function(data){
+    //our success is not working 
+    console.log(data);
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    // console.error(error);
+}
+
+
+})
+
   
 
 //Console.log
