@@ -36,9 +36,9 @@ $("#mondayBtn").on("click", function (event) {
 
 const savedQuote1 = localStorage.getItem('tywinQuote')
 if (savedQuote1) {
-    tywinQuote.textContent = savedQuote;
+    tywinQuote.textContent = savedQuote1;
 } 
-$("#tuesdayBtn").on("click", function () {
+$("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
     fetch(tywin)
         .then(response => response.json())
@@ -52,7 +52,12 @@ $("#tuesdayBtn").on("click", function () {
         })
 })
 
-$("#wednesdayBtn").on("click", function () {
+const savedQuote2 = localStorage.getItem('daenerysQuote')
+if (savedQuote2) {
+    daenerysQuote.textContent = savedQuote2;
+} 
+$("#wednesdayBtn").on("click", function (event) {
+    event.preventDefault();
     fetch(daenerys)
         .then(response => response.json())
         .then(data => {
