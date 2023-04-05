@@ -64,6 +64,7 @@ $("#thursdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             jonQuote.textContent = quote;
+            localStorage.setItem('jonQuote', quote);
         })
         .then(function (data) {
             console.log(data);
