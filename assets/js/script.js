@@ -15,7 +15,7 @@ const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
 //Event Listener
-$("#generateGif").on("click",function(){
+$("#mondayBtn").on("click",function(){
     fetch(tyrion)
     .then(function (response) {
         return response.json();
@@ -27,7 +27,7 @@ $("#generateGif").on("click",function(){
     
 }) 
 
-$("#generateGif").on("click",function(){
+$("#tuesdayBtn").on("click",function(){
     fetch(tywin)
     .then(function (response) {
         return response.json();
@@ -37,7 +37,7 @@ $("#generateGif").on("click",function(){
     })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#wendnesdayBtn").on("click",function(){
     fetch(arya)
     .then(function (response) {
         return response.json();
@@ -47,7 +47,7 @@ $("#generateGif").on("click",function(){
     })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#thursdayBtn").on("click",function(){
     fetch(jon)
         .then(function (response) {
             return response.json();
@@ -57,7 +57,7 @@ $("#generateGif").on("click",function(){
         })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#fridayBtn").on("click",function(){
     fetch(jaime)
         .then(function (response) {
             return response.json();
@@ -67,7 +67,7 @@ $("#generateGif").on("click",function(){
         })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#saturdayBtn").on("click",function(){
     fetch(cersei)
         .then(function (response) {
             return response.json();
@@ -77,7 +77,7 @@ $("#generateGif").on("click",function(){
         })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#sundayBtn").on("click",function(){
     fetch(daenerys)
         .then(function (response) {
             return response.json();
