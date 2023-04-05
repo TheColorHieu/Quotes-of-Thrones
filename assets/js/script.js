@@ -124,7 +124,12 @@ $("#saturdayBtn").on("click", function (event) {
         })
 })
 
-$("#sundayBtn").on("click", function () {
+const savedQuote6 = localStorage.getItem('cerseiQuote')
+if (savedQuote6) {
+    tywinQuote.textContent = savedQuote6;
+} 
+$("#sundayBtn").on("click", function (event) {
+    event.preventDefault();
     fetch(cersei)
         .then(response => response.json())
         .then(data => {
