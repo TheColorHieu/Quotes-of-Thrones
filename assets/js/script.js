@@ -70,7 +70,12 @@ $("#wednesdayBtn").on("click", function (event) {
         })
 })
 
-$("#thursdayBtn").on("click", function () {
+const savedQuote3 = localStorage.getItem('jonQuote')
+if (savedQuote3) {
+    tywinQuote.textContent = savedQuote3;
+} 
+$("#thursdayBtn").on("click", function (event) {
+    event.preventDefault();
     fetch(jon)
         .then(response => response.json())
         .then(data => {
@@ -83,7 +88,12 @@ $("#thursdayBtn").on("click", function () {
         })
 })
 
-$("#fridayBtn").on("click", function () {
+const savedQuote4 = localStorage.getItem('aryaQuote')
+if (savedQuote4) {
+    tywinQuote.textContent = savedQuote4;
+} 
+$("#fridayBtn").on("click", function (event) {
+    event.preventDefault();
     fetch(arya)
         .then(response => response.json())
         .then(data => {
