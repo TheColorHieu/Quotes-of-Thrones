@@ -200,6 +200,11 @@ $("#sundayBtn").on("click", function (event) {
 
 //trying to make it with jquery 
 //testing the first fetch function for tyrion
+//now we are attempting to get it to function with our button 
+$(document).ready(function () {
+    $('#mondayBtn').click(function(){
+        
+
 $.ajax({
 url:'https://api.giphy.com/v1/gifs/search?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
@@ -222,6 +227,8 @@ error: function(error){
 }
 
 
+})
+})
 })
 
   
