@@ -38,6 +38,7 @@ $("#tuesdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             tywinQuote.textContent = quote;
+            localStorage.setItem('tywinQuote', quote);
         })
         .then(function (data) {
             console.log(data);
