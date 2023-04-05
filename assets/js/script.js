@@ -1,4 +1,4 @@
-//var giphykey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
+var apiKey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
 const tyrionQuote = document.querySelector('#tyrionQuote');
 const tywinQuote = document.querySelector('#tywinQuote');
@@ -111,37 +111,53 @@ $("#sundayBtn").on("click", function () {
 })
 
 //creating the function for giphys 
-document.addEventListener("DOMContentLoaded", init);
-function init(){
-    document.getElementById("mondayBtn").addEventListener("click", event => {
-        //prevent from the page to reload 
-        event.preventDefault();
-        let url = 'https://api.giphy.com/v1/gifs/search?api_key=${giphykey}&limit=1q=';
-        console.log(url);
-        fetch(url)
-        .then(response => response.json() )
-        .then(content => {
-         //data that we are trying to retrieve 
-         console.log(content.data)    
-         console.let('META', content.meta)
-        //creating the html cards so that we can then append 
-        let fig = document.createElement('figure');
-        let img = document.createElement('img');
-        let fc = document.createElement('figcaption');
-        img.src = content.data[0].images.downsized.url;
-        img.alt = content.data[0].title;
-        fig.appendChild(img);
-        fig.appendChild(fc);
-        //need to change where we going to append it 
-        let out = document.querySelector('.out');
-        out.insertAdjacentElement('afterbegin', fig);
-        })
+// document.addEventListener("DOMContentLoaded", init);
+// function init(){
+//     document.getElementById("mondayBtn").addEventListener("click", event => {
+//         //prevent from the page to reload 
+//         event.preventDefault();
+//         const apiUrl = 'https://api.giphy.com/v1/gifs/search?api_key=$XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1q=';
+//         fetch(apiUrl)
+//         .then(response => response.json() )
+//         .then(content => {
+//          //data that we are trying to retrieve 
+//          console.log(content.data)    
+//          console.let('META', content.meta)
+//         //creating the html cards so that we can then append 
+//         let fig = document.createElement('figure');
+//         let img = document.createElement('img');
+//         let fc = document.createElement('figcaption');
+//         img.src = content.data[0].images.downsized.url;
+//         img.alt = content.data[0].title;
+//         fig.appendChild(img);
+//         fig.appendChild(fc);
+//         //need to change where we going to append it 
+//         let out = document.querySelector('.out');
+//         out.insertAdjacentElement('afterbegin', fig);
+//         })
        
-        .catch(error =>{
-            console.error(error);
-        });
-    })
-}
+//         .catch(error =>{
+//             console.error(error);
+//         });
+//     })
+//}
+function fetchGiphyByCharacter(apiKey, tyrion) {
+    const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=Game of Thrones ${tyrion}&limit=1`;
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        // Get a random Giphy from the API data
+        const randomIndex = Math.floor(Math.random() * data.data.length);
+        const randomGiphy = data.data[randomIndex];
+  
+        // Do something with the random Giphy
+        console.log(randomGiphy);
+      })
+      .catch(error => {
+        console.error('Error fetching Giphy', error);
+      });
+  }
+  
 
 //Console.log
 
