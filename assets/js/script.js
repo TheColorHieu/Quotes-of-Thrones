@@ -101,6 +101,23 @@ $("#sundayBtn").on("click", function () {
         })
 })
 
-
+//creating the function for giphys 
+document.addEventListener("DOMContentLoaded", init);
+function init(){
+    document.getElementById("btnSearch").addEventListener("click", event => {
+        //prevent from the page to reload 
+        event.preventDefault();
+        let url = 'https://api.giphy.com/v1/gifs/search?api_key=${giphykey}&limit=1q=';
+        let str = document.getElementById("search").value.trim();
+        url = url.concat(str);
+        console.log(url);
+        fetch(url)
+        .then()
+        .then()
+    })
+}
 
 //Console.log
+
+
+//quote content
