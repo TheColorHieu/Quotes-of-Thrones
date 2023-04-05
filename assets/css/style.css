@@ -1,23 +1,61 @@
-html{
-    background-color: rgba(32, 35, 53, 0.889);
+html {
+    background-color: #562627;
 }
-@font-face{
+
+@font-face {
     font-family: "Game Of Thrones";
-    src: url("../font/Game\ of\ Thrones.ttf")
+    src: url("../font/Game\ of\ Thrones.ttf");
 }
-#mainHeader{
-    font-family:"Game of Thrones";
-    padding-top: 2%;
-    color: rgb(174, 121, 185);
-}
-#monday,#tuesday,#wednesday,#thursday,#friday,#saturday,#sunday{
-    background-color: rgb(133, 133, 201);
+
+#mainHeader {
     font-family: "Game of Thrones";
+    padding-top: 2%;
+    color:#d69209e6; 
 }
-#generateGif{
+#mainHeader h1{
+    font-size:60px;
+}
+
+#monday,
+#tuesday,
+#wednesday,
+#thursday,
+#friday,
+#saturday,
+#sunday {
+    background-color: #773030;
+    color:#d69209e6;
+    font-family: "Game of Thrones";
+    font-size:30px;
+}
+p{
+    font-size:20px;
+    padding-top:2%;
+}
+
+
+#generateGif {
     font-family: "Game of Thrones";
 }
 
-#generateGif:hover{
-    background-color: rgb(167, 167, 199);
+#mondayBtn,
+#tuesdayBtn,
+#wednesdayBtn,
+#thursdayBtn,
+#fridayBtn,
+#saturdayBtn,
+#sundayBtn{
+    background-color:#562627;
+    color:#b17e16;
+    font-family:"Game of Thrones"
+}
+
+#mondayBtn:hover,
+#tuesdayBtn:hover,
+#wednesdayBtn:hover,
+#thursdayBtn:hover,
+#fridayBtn:hover,
+#saturdayBtn:hover,
+#sundayBtn:hover {
+    background-color: rgb(99, 4, 4);
 }
