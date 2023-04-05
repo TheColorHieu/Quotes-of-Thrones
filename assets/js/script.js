@@ -17,7 +17,7 @@ const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
 //Event Listener
-$("#generateGif").on("click",function(){
+$("#mondayBtn").on("click",function(){
     fetch(tyrion)
     .then(function (response) {
         return response.json();
@@ -29,7 +29,7 @@ $("#generateGif").on("click",function(){
     
 }) 
 
-$("#generateGif").on("click",function(){
+$("#tuesdayBtn").on("click",function(){
     fetch(tywin)
     .then(function (response) {
         return response.json();
