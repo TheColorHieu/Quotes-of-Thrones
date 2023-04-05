@@ -77,6 +77,7 @@ $("#fridayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             aryaQuote.textContent = quote;
+            localStorage.setItem('aryaQuote', quote);
         })
         .then(function (data) {
             console.log(data);
