@@ -39,7 +39,7 @@ $("#tuesdayBtn").on("click",function(){
     })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#wendnesdayBtn").on("click",function(){
     fetch(arya)
     .then(function (response) {
         return response.json();
@@ -49,7 +49,7 @@ $("#generateGif").on("click",function(){
     })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#thursdayBtn").on("click",function(){
     fetch(jon)
         .then(function (response) {
             return response.json();
@@ -59,7 +59,7 @@ $("#generateGif").on("click",function(){
         })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#fridayBtn").on("click",function(){
     fetch(jaime)
         .then(function (response) {
             return response.json();
@@ -69,7 +69,7 @@ $("#generateGif").on("click",function(){
         })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#saturdayBtn").on("click",function(){
     fetch(cersei)
         .then(function (response) {
             return response.json();
@@ -79,7 +79,7 @@ $("#generateGif").on("click",function(){
         })
 }) 
 
-$("#generateGif").on("click",function(){
+$("#sundayBtn").on("click",function(){
     fetch(daenerys)
         .then(function (response) {
             return response.json();
