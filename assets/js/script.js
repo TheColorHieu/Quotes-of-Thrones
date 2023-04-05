@@ -104,7 +104,7 @@ $("#sundayBtn").on("click", function () {
 //creating the function for giphys 
 document.addEventListener("DOMContentLoaded", init);
 function init(){
-    document.getElementById("btnSearch").addEventListener("click", event => {
+    document.getElementById("mondayBtn").addEventListener("click", event => {
         //prevent from the page to reload 
         event.preventDefault();
         let url = 'https://api.giphy.com/v1/gifs/search?api_key=${giphykey}&limit=1q=';
@@ -112,8 +112,16 @@ function init(){
         url = url.concat(str);
         console.log(url);
         fetch(url)
-        .then()
-        .then()
+        .then(response => response.json() )
+        .then(content => {
+         //data that we are trying to retrieve 
+         console.log(content.data)    
+         console.let('META', content.meta)
+        })
+       
+        .catch(error =>{
+            console.error(error);
+        });
     })
 }
 
