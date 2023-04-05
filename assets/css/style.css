@@ -1,13 +1,21 @@
 html{
     background-color: rgba(32, 35, 53, 0.889);
 }
-
+@font-face{
+    font-family: Game Of Thrones;
+    src: url(GameofThrones.ttf)
+}
 #mainHeader{
-    font-family:monospace;
+    font-family:Game of Thrones;
+    padding-top: 2%;
     color: rgb(174, 121, 185);
 }
 #monday,#tuesday,#wednesday,#thursday,#friday,#saturday,#sunday{
     background-color: rgb(133, 133, 201);
+    font-family: Game of Thrones;
+}
+#generateGif{
+    font-family: Game of Thrones;
 }
 
 #generateGif:hover{
