@@ -199,17 +199,26 @@ $("#sundayBtn").on("click", function (event) {
 //     }
 
 //trying to make it with jquery 
+//testing the first fetch function for tyrion
 $.ajax({
-url:'https://api.giphy.com/v1/gifs/search?q=game+of+thrones+characters&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+url:'https://api.giphy.com/v1/gifs/search?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
+
 success : function(data){
     //our success is not working 
     console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data[0].images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //this is how append it 
+    $('tyrionQuote').append(img);
+    
 },
 //our error is currently working 
 error: function(error){
     //testing to see if its not working 
-    // console.error(error);
+    console.error(error);
 }
 
 
