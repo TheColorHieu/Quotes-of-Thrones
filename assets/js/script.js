@@ -1,11 +1,13 @@
 var giphykey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
-const character = document.getElementById("monday");
-const character2 = document.getElementById("tuesday");
-const character3 = document.getElementById("wednesday");
-const character4 = document.getElementById("thursday");
-const character5 = document.getElementById("friday");
-const character6 = document.getElementById("saturday");
-const character7 = document.getElementById("sunday");
+
+const tyrionQuote = $("#monday");
+const twyinQuote = $("#tuesday");
+const daenerysQuote = $("#wednesday");
+const jonQuote = $("#thursday");
+const arayQuote = $("#friday");
+const jaimeQuote = $("#saturday");
+const cerseiQuote = $("#sunday");
+
 const tyrion = 'https://api.gameofthronesquotes.xyz/v1/author/tyrion/2'
 const tywin = 'https://api.gameofthronesquotes.xyz/v1/author/tywin/2'
 const daenerys = 'https://api.gameofthronesquotes.xyz/v1/author/daenerys/2'
