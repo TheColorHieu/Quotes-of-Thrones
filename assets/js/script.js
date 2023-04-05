@@ -90,6 +90,7 @@ $("#saturdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             jaimeQuote.textContent = quote;
+            localStorage.setItem('jaimeQuote', quote);
         })
         .then(function (data) {
             console.log(data);
