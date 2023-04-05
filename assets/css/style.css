@@ -3,7 +3,7 @@ html{
 }
 @font-face{
     font-family: Game Of Thrones;
-    src: url(GameofThrones.ttf)
+    src: url("../font/GameofThrones.ttf")
 }
 #mainHeader{
     font-family:Game of Thrones;
