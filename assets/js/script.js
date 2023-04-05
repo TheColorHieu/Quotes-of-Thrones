@@ -16,6 +16,8 @@ const arya = 'https://api.gameofthronesquotes.xyz/v1/author/arya/2'
 const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
+localStorage.setItem('myCode', 'put your code here');
+
 //Event Listener
 $("#mondayBtn").on("click", function () {
     fetch(tyrion)
@@ -23,6 +25,7 @@ $("#mondayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             tyrionQuote.textContent = quote;
+            localStorage.setItem('tyrionQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -35,6 +38,7 @@ $("#tuesdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             tywinQuote.textContent = quote;
+            localStorage.setItem('tywinQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -47,6 +51,7 @@ $("#wednesdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             daenerysQuote.textContent = quote;
+            localStorage.setItem('daenerysQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -59,6 +64,7 @@ $("#thursdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             jonQuote.textContent = quote;
+            localStorage.setItem('jonQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -71,6 +77,7 @@ $("#fridayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             aryaQuote.textContent = quote;
+            localStorage.setItem('aryaQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -83,6 +90,7 @@ $("#saturdayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             jaimeQuote.textContent = quote;
+            localStorage.setItem('jaimeQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -95,6 +103,7 @@ $("#sundayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             cerseiQuote.textContent = quote;
+            localStorage.setItem('cerseiQuote', quote);
         })
         .then(function (data) {
             console.log(data);
