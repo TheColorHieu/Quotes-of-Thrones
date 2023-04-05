@@ -16,10 +16,13 @@ const arya = 'https://api.gameofthronesquotes.xyz/v1/author/arya/2'
 const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
-localStorage.setItem('myCode', 'put your code here');
-
+const savedQuote = localStorage.getItem('tyrionQuote')
+if (savedQuote) {
+    tyrionQuote.textContent = savedQuote;
+} 
 //Event Listener
-$("#mondayBtn").on("click", function () {
+$("#mondayBtn").on("click", function (event) {
+    event.preventDefault();
     fetch(tyrion)
         .then(response => response.json())
         .then(data => {
@@ -30,7 +33,7 @@ $("#mondayBtn").on("click", function () {
         .then(function (data) {
             console.log(data);
         })
-})
+});
 
 $("#tuesdayBtn").on("click", function () {
     fetch(tywin)
