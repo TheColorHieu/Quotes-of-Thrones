@@ -126,6 +126,17 @@ function init(){
          //data that we are trying to retrieve 
          console.log(content.data)    
          console.let('META', content.meta)
+        //creating the html cards so that we can then append 
+        let fig = document.createElement('figure');
+        let img = document.createElement('img');
+        let fc = document.createElement('figcaption');
+        img.src = content.data[0].images.downsized.url;
+        img.alt = content.data[0].title;
+        fig.appendChild(img);
+        fig.appendChild(fc);
+        //need to change where we going to append it 
+        let out = document.querySelector('.out');
+        out.insertAdjacentElement('afterbegin', fig);
         })
        
         .catch(error =>{
