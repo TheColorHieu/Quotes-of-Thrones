@@ -103,6 +103,7 @@ $("#sundayBtn").on("click", function () {
         .then(data => {
             const quote = data[0].sentence;
             cerseiQuote.textContent = quote;
+            localStorage.setItem('cerseiQuote', quote);
         })
         .then(function (data) {
             console.log(data);
