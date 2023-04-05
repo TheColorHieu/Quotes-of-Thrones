@@ -1,12 +1,12 @@
 var giphykey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
-const tyrionQuote = $("#monday");
-const twyinQuote = $("#tuesday");
-const daenerysQuote = $("#wednesday");
-const jonQuote = $("#thursday");
-const arayQuote = $("#friday");
-const jaimeQuote = $("#saturday");
-const cerseiQuote = $("#sunday");
+const tyrionQuote = document.querySelector('#tyrionQuote');
+const tywinQuote = document.querySelector('#tywinQuote');
+const daenerysQuote = document.querySelector('#daenerysQuote');
+const jonQuote = document.querySelector('#jonQuote');
+const aryaQuote = document.querySelector('#aryaQuote');
+const jaimeQuote = document.querySelector('#jaimeQuote');
+const cerseiQuote = document.querySelector('#cerseiQuote');
 
 const tyrion = 'https://api.gameofthronesquotes.xyz/v1/author/tyrion/2'
 const tywin = 'https://api.gameofthronesquotes.xyz/v1/author/tywin/2'
@@ -17,77 +17,89 @@ const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
 //Event Listener
-$("#mondayBtn").on("click",function(){
+$("#mondayBtn").on("click", function () {
     fetch(tyrion)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    })
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            tyrionQuote.textContent = quote;
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+})
 
-    
-}) 
-
-$("#tuesdayBtn").on("click",function(){
+$("#tuesdayBtn").on("click", function () {
     fetch(tywin)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    })
-}) 
-
-$("#wednesdayBtn").on("click",function(){
-    fetch(arya)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    })
-}) 
-
-$("#thursdayBtn").on("click",function(){
-    fetch(jon)
-        .then(function (response) {
-            return response.json();
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            tywinQuote.textContent = quote;
         })
         .then(function (data) {
             console.log(data);
         })
-}) 
+})
 
-$("#fridayBtn").on("click",function(){
-    fetch(jaime)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-}) 
-
-$("#saturdayBtn").on("click",function(){
-    fetch(cersei)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-}) 
-
-$("#sundayBtn").on("click",function(){
+$("#wednesdayBtn").on("click", function () {
     fetch(daenerys)
-        .then(function (response) {
-            return response.json();
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            daenerysQuote.textContent = quote;
         })
         .then(function (data) {
             console.log(data);
         })
-}) 
+})
+
+$("#thursdayBtn").on("click", function () {
+    fetch(jon)
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            jonQuote.textContent = quote;
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+})
+
+$("#fridayBtn").on("click", function () {
+    fetch(arya)
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            aryaQuote.textContent = quote;
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+})
+
+$("#saturdayBtn").on("click", function () {
+    fetch(jaime)
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            jaimeQuote.textContent = quote;
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+})
+
+$("#sundayBtn").on("click", function () {
+    fetch(cersei)
+        .then(response => response.json())
+        .then(data => {
+            const quote = data[0].sentence;
+            cerseiQuote.textContent = quote;
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+})
 
 //creating the function for giphys 
 document.addEventListener("DOMContentLoaded", init);
