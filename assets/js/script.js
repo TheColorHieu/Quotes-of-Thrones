@@ -106,7 +106,12 @@ $("#fridayBtn").on("click", function (event) {
         })
 })
 
-$("#saturdayBtn").on("click", function () {
+const savedQuote5 = localStorage.getItem('jaimeQuote')
+if (savedQuote5) {
+    tywinQuote.textContent = savedQuote5;
+} 
+$("#saturdayBtn").on("click", function (event) {
+    event.preventDefault();
     fetch(jaime)
         .then(response => response.json())
         .then(data => {
