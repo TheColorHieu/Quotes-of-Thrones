@@ -363,29 +363,6 @@ error: function(error){
 
 
 
-//public class APIHandler {
-    //public static void processAPIData() throws Exception {
-        //URL url = new URL("https://api.example.com/data");
-        //HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        //conn.setRequestMethod("GET");
-
-        //if (conn.getResponseCode() == 200) {
-            //BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            //String inputLine;
-            //StringBuffer response = new StringBuffer();
-           // while ((inputLine = in.readLine()) != null) {
-              //  response.append(inputLine);
-           // }
-            //in.close();
-
-            //JSONObject data = new JSONObject(response.toString());
-            // process the data as needed
-        //} else {
-          //  System.out.println("Error: API request failed with status code " + conn.getResponseCode());
-       // }
-        //conn.disconnect();
-    //}
-//}
 
 
 
