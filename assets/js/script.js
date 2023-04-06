@@ -166,6 +166,16 @@ success : function(data){
     
     
 },
+//requests: function(request){
+//response = requests.get("https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister")
+
+//if response.status_code == 200:
+    //data = response.json();
+   
+//else:
+    //print("Error: API request failed with status code", response.status_code);
+//}
+
 //our error is currently working 
 error: function(error){
     //testing to see if its not working 
@@ -360,15 +370,15 @@ error: function(error){
     console.error(error);
 }
 
-import requests
 
-response = requests.get("https://api.example.com/data")
 
-if response.status_code == 200:
-    data = response.json()
-    # process the data as needed
-else:
-    print("Error: API request failed with status code", response.status_code)
+//response = requests.get("https://api.example.com/data")
+
+//if response.status_code == 200:
+    //data = response.json()
+   
+//else:
+    //print("Error: API request failed with status code", response.status_code)
 
 
 })
