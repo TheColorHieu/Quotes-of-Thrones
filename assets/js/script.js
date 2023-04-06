@@ -142,79 +142,22 @@ $("#sundayBtn").on("click", function (event) {
         })
 })
 
-//creating the function for giphys 
-// document.addEventListener("DOMContentLoaded", init);
-// function init(){
-//     document.getElementById("mondayBtn").addEventListener("click", event => {
-//         //prevent from the page to reload 
-//         event.preventDefault();
-//         const apiUrl = 'https://api.giphy.com/v1/gifs/search?api_key=$XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1q=';
-//         fetch(apiUrl)
-//         .then(response => response.json() )
-//         .then(content => {
-//          //data that we are trying to retrieve 
-//          console.log(content.data)    
-//          console.let('META', content.meta)
-//         //creating the html cards so that we can then append 
-//         let fig = document.createElement('figure');
-//         let img = document.createElement('img');
-//         let fc = document.createElement('figcaption');
-//         img.src = content.data[0].images.downsized.url;
-//         img.alt = content.data[0].title;
-//         fig.appendChild(img);
-//         fig.appendChild(fc);
-//         //need to change where we going to append it 
-//         let out = document.querySelector('.out');
-//         out.insertAdjacentElement('afterbegin', fig);
-//         })
-       
-//         .catch(error =>{
-//             console.error(error);
-//         });
-//     })
-// }
-// function fetchGiphyByCharacter(apiKey, tyrion) {
-//     document.getElementById("mondayBtn").addEventListener("click", event => {
-//     const apiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=Game of Thrones ${tyrion}&limit=1`;
-//     fetch(apiUrl)
-//         .then(response => response.json())
-//         .then(data => {
-//             // Get a random Giphy from the API data
-//             const randomIndex = Math.floor(Math.random() * data.data.length);
-//             const randomGiphy = data.data[randomIndex];
-//             const gifUrl = data.data.images.original.url;
-//             const gifContainer = document.getElementById('gif-container');
-//             const img = document.createElement('img');
-//             img.src = gifUrl;
-//             gifContainer.appendChild(img);
-//         })
-//         .catch(error => console.error(error));
-  
-//         // Do something with the random Giphy
-//         console.log(randomGiphy);
-//       })
-//       .catch(error => {
-//         console.error('Error fetching Giphy', error);
-//       });
-//     }
 
 //trying to make it with jquery 
 //testing the first fetch function for tyrion
 //now we are attempting to get it to function with our button 
 $(document).ready(function () {
     $('#mondayBtn').click(function(){
-        
 //nested the fetch function inside so that it will be trigger everytime we press the generate button 
 $.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister&rating=pg',
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
     // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
 
 success : function(data){
-    //our success is not working 
+    //our success is working 
     console.log(data);
     //this is how we get the url of the first gif 
-    // var gifUrl = data.data[0].images.original.url;
     var gifUrl = data.data.images.original.url;
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
@@ -236,7 +179,157 @@ error: function(error){
 
   
 
-//Console.log
+$(document).ready(function () {
+    $('#tuesdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tywin+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tywin').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
 
 
-//quote content
+})
+})
+})
+
+$(document).ready(function () {
+    $('#wednesdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=daenerys+targaryen',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#daenerysQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
+
+$(document).ready(function () {
+    $('#thursdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
+
+$(document).ready(function () {
+    $('#saturdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
+
+$(document).ready(function () {
+    $('#sundayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
