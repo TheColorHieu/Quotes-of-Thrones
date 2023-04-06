@@ -204,7 +204,7 @@ $("#sundayBtn").on("click", function (event) {
 $(document).ready(function () {
     $('#mondayBtn').click(function(){
         
-
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
 $.ajax({
 url:'https://api.giphy.com/v1/gifs/search?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
@@ -217,7 +217,7 @@ success : function(data){
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
     //this is how append it 
-    $('tyrionQuote').append(img);
+    $('#tyrionQuote').append(img);
     
 },
 //our error is currently working 
