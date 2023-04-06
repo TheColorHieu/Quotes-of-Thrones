@@ -203,18 +203,16 @@ $("#sundayBtn").on("click", function (event) {
 //now we are attempting to get it to function with our button 
 $(document).ready(function () {
     $('#mondayBtn').click(function(){
-        
 //nested the fetch function inside so that it will be trigger everytime we press the generate button 
 $.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister&rating=pg',
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
     // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
 
 success : function(data){
-    //our success is not working 
+    //our success is working 
     console.log(data);
     //this is how we get the url of the first gif 
-    // var gifUrl = data.data[0].images.original.url;
     var gifUrl = data.data.images.original.url;
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
@@ -236,7 +234,157 @@ error: function(error){
 
   
 
-//Console.log
+$(document).ready(function () {
+    $('tuesdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
 
 
-//quote content
+})
+})
+})
+
+$(document).ready(function () {
+    $('#wednesdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
+
+$(document).ready(function () {
+    $('#thursdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
+
+$(document).ready(function () {
+    $('#saturdayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
+
+$(document).ready(function () {
+    $('#sundayBtn').click(function(){
+//nested the fetch function inside so that it will be trigger everytime we press the generate button 
+$.ajax({
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
+method: 'GET',
+
+success : function(data){
+    //our success is working 
+    console.log(data);
+    //this is how we get the url of the first gif 
+    var gifUrl = data.data.images.original.url;
+    //this is how we create an image with the url as source
+    var img = $('<img>').attr('src', gifUrl);
+    //allows us to append ! 
+    $('#tyrionQuote').append(img);
+    
+    
+},
+//our error is currently working 
+error: function(error){
+    //testing to see if its not working 
+    console.error(error);
+}
+
+
+})
+})
+})
