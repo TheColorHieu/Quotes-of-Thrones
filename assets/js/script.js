@@ -166,15 +166,6 @@ success : function(data){
     
     
 },
-//requests: function(request){
-//response = requests.get("https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister")
-
-//if response.status_code == 200:
-    //data = response.json();
-   
-//else:
-    //print("Error: API request failed with status code", response.status_code);
-//}
 
 //our error is currently working 
 error: function(error){
@@ -372,13 +363,35 @@ error: function(error){
 
 
 
-//response = requests.get("https://api.example.com/data")
+public class APIHandler {
+    public static void processAPIData() throws Exception {
+        URL url = new URL("https://api.example.com/data");
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
 
-//if response.status_code == 200:
-    //data = response.json()
-   
-//else:
-    //print("Error: API request failed with status code", response.status_code)
+        if (conn.getResponseCode() == 200) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            JSONObject data = new JSONObject(response.toString());
+            // process the data as needed
+        } else {
+            System.out.println("Error: API request failed with status code " + conn.getResponseCode());
+        }
+        conn.disconnect();
+    }
+}
+
+
+
+
+
+
 
 
 })
