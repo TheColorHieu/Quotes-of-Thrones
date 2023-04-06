@@ -360,13 +360,15 @@ error: function(error){
     console.error(error);
 }
 
-//if (x > 0) {
-   // System.out.println;
-//} else if (x < 0) {
-   // System.out.println;
-//} else {
-  //  System.out.println;
-//}
+import requests
+
+response = requests.get("https://api.example.com/data")
+
+if response.status_code == 200:
+    data = response.json()
+    # process the data as needed
+else:
+    print("Error: API request failed with status code", response.status_code)
 
 
 })
