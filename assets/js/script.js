@@ -195,7 +195,7 @@ success : function(data){
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
     //allows us to append ! 
-    $('#tywinquotes').append(img);
+    $('#tywinQuotes').append(img);
     
     
 },
