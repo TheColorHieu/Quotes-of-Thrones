@@ -307,7 +307,7 @@ $(document).ready(function () {
     $('#saturdayBtn').click(function(){
 //nested the fetch function inside so that it will be trigger everytime we press the generate button 
 $.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister',
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jaime+lannister',
     // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
 
@@ -319,7 +319,7 @@ success : function(data){
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
     //allows us to append ! 
-    $('#tyrionQuote').append(img);
+    $('#jaimeQuote').append(img);
     
     
 },
