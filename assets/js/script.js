@@ -41,7 +41,7 @@ $("#mondayBtn").on("click", function (event) {
         })
 });
 
-const savedQuote1 = localStorage.getItem('tywinQuote')
+const savedQuote1 = localStorage.getItem('joffreyQuote')
 if (savedQuote1) {
     tywinQuote.textContent = savedQuote1;
 }
