@@ -1,11 +1,32 @@
 # Quotes-of-Thrones
-Making Calendar that displays quotes 
 
-# User Story
+## Description
 
-As a game of thrones fan
-I want calender the gets quotes and gifs from game of throne characters
+The Quote of Thrones website can be used by fans or intrigued people to help them generate quotes and gifs for specific characters. The website is composition of Quotes and Gifs and within certain week days.
 
-# Link
+## Installation
 
-![screenshot] (Quotes-of-Thrones\assets\img\qot.png)
+N/A
+
+## Usage
+
+To use the Quotes of Thrones website, a user would first have to click a generate button on a preferred day. Once that button is clicked, any user will be presented with a quote. If the button is clicked repeatedly, new quotes and gifs will appear for a person on that day.
+
+## Credits
+
+...
+
+## License
+
+Please refer to the LICENSE in the repo.
+
+## Technologies 
+
+gifs API, quotes API, bulma CSS framework and jquery.
+
+# Screenshot
+
+![screenshot] ()
+
+# Link 
+
