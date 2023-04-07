@@ -19,6 +19,38 @@ const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
 const today = dayjs().format("dddd");
 const currentTime = dayjs().hour();
+
+
+const weekdays ={
+    monday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/tyrion/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister",
+    },
+    tuesday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/joffrey/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffrey+baratheon",
+    },
+    wednesday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/daenerys/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=daenerys+targaryen",
+    },
+    thursday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/jon/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jon+snow",
+    },
+    friday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/arya/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=arya+stark",
+    },
+    saturday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/jaime/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jaime+lannister",
+    },
+    sunday: {
+      quote: "https://api.gameofthronesquotes.xyz/v1/author/cersei/2",
+      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=cersei+lannister",
+    },
+  }
 //prints header using jquerry
 $("h2").append(today);
 
