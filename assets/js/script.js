@@ -1,7 +1,7 @@
 var apiKey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
 const tyrionQuote = document.querySelector('#tyrionQuote');
-const tywinQuote = document.querySelector('#tywinQuote');
+const joffreyQuote = document.querySelector('#jofferyQuote');
 const daenerysQuote = document.querySelector('#daenerysQuote');
 const jonQuote = document.querySelector('#jonQuote');
 const aryaQuote = document.querySelector('#aryaQuote');
@@ -9,7 +9,7 @@ const jaimeQuote = document.querySelector('#jaimeQuote');
 const cerseiQuote = document.querySelector('#cerseiQuote');
 
 const tyrion = 'https://api.gameofthronesquotes.xyz/v1/author/tyrion/2'
-const tywin = 'https://api.gameofthronesquotes.xyz/v1/author/tywin/2'
+const joffrey = 'https://api.gameofthronesquotes.xyz/v1/author/joffrey/2'
 const daenerys = 'https://api.gameofthronesquotes.xyz/v1/author/daenerys/2'
 const jon = 'https://api.gameofthronesquotes.xyz/v1/author/jon/2'
 const arya = 'https://api.gameofthronesquotes.xyz/v1/author/arya/2'
@@ -40,12 +40,12 @@ if (savedQuote1) {
 } 
 $("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(tywin)
+    fetch(joffrey)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
             tywinQuote.textContent = quote;
-            localStorage.setItem('tywinQuote', quote);
+            localStorage.setItem('joffreyQuote', quote);
         })
         .then(function (data) {
             console.log(data);
@@ -184,7 +184,7 @@ $(document).ready(function () {
     $('#tuesdayBtn').click(function(){
 //nested the fetch function inside so that it will be trigger everytime we press the generate button 
 $.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tywin+lannister',
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffrey+baratheon',
     // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
 
@@ -196,7 +196,7 @@ success : function(data){
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
     //allows us to append ! 
-    $('#tywinQuote').append(img);
+    $('#joffreyQuote').append(img);
     
     
 },
