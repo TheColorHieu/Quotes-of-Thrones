@@ -14,7 +14,7 @@ To use the Quotes of Thrones website, a user would first have to click a generat
 
 ## Credits
 
-...
+Adam Fox (IamAdamJFox), Shannon Hogeboom (SilverFae), Hieu Tran (TheColorHieu), Mubarak Abdulkadir (mubarak24).
 
 ## License
 
