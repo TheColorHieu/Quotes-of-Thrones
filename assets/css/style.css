@@ -44,10 +44,14 @@ p{
 #thursdayBtn,
 #fridayBtn,
 #saturdayBtn,
-#sundayBtn{
+#sundayBtn,
+#resetBtn{
     background-color:#562627;
     color:#b17e16;
     font-family:"Game of Thrones"
+}
+#resetBtn{
+   background-color: #3d0202;
 }
 
 #mondayBtn:hover,
@@ -56,6 +60,12 @@ p{
 #thursdayBtn:hover,
 #fridayBtn:hover,
 #saturdayBtn:hover,
-#sundayBtn:hover {
+#sundayBtn:hover,
+#resetBtn:hover {
     background-color: rgb(99, 4, 4);
 }
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
