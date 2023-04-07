@@ -2,18 +2,30 @@ html {
     background-color: #562627;
 }
 
-@font-face {
-    font-family: "Game Of Thrones";
-    src: url("../font/Game\ of\ Thrones.ttf");
+
+p {
+    font-size: 20px;
+    padding-top: 2%;
 }
 
 #mainHeader {
     font-family: "Game of Thrones";
     padding-top: 2%;
-    color:#d69209e6; 
+    color: #d69209e6;
 }
-#mainHeader h1{
-    font-size:60px;
+
+#timeHeader {
+    font-family: "Game of Thrones";
+    font-size: 25px;
+    padding-bottom: 2%;
+    color: #d69209e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainHeader h1 {
+    font-size: 60px;
 }
 
 #monday,
@@ -24,18 +36,9 @@ html {
 #saturday,
 #sunday {
     background-color: #773030;
-    color:#d69209e6;
+    color: #d69209e6;
     font-family: "Game of Thrones";
-    font-size:30px;
-}
-p{
-    font-size:20px;
-    padding-top:2%;
-}
-
-
-#generateGif {
-    font-family: "Game of Thrones";
+    font-size: 30px;
 }
 
 #mondayBtn,
@@ -45,13 +48,10 @@ p{
 #fridayBtn,
 #saturdayBtn,
 #sundayBtn,
-#resetBtn{
-    background-color:#562627;
-    color:#b17e16;
-    font-family:"Game of Thrones"
-}
-#resetBtn{
-   background-color: #3d0202;
+#resetBtn {
+    background-color: #562627;
+    color: #b17e16;
+    font-family: "Game of Thrones"
 }
 
 #mondayBtn:hover,
@@ -64,18 +64,22 @@ p{
 #resetBtn:hover {
     background-color: rgb(99, 4, 4);
 }
+
+#generateGif {
+    font-family: "Game of Thrones";
+}
+
 #button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  #timeHeader{
-    font-family: "Game of Thrones";
-    font-size:25px;
-    padding-bottom: 2%;
-    color:#d69209e6; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+#resetBtn {
+    background-color: #3d0202;
+}
+
+@font-face {
+    font-family: "Game Of Thrones";
+    src: url("../font/Game\ of\ Thrones.ttf");
+}
