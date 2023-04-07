@@ -43,7 +43,7 @@ $("#mondayBtn").on("click", function (event) {
 
 const savedQuote1 = localStorage.getItem('joffreyQuote')
 if (savedQuote1) {
-    tywinQuote.textContent = savedQuote1;
+    jofferyQuote.textContent = savedQuote1;
 }
 $("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
@@ -51,7 +51,7 @@ $("#tuesdayBtn").on("click", function (event) {
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
-            tywinQuote.textContent = quote;
+           jofferyQuote.textContent = quote;
             localStorage.setItem('joffreyQuote', quote);
         })
         .then(function (data) {
@@ -189,7 +189,7 @@ $(document).ready(function () {
     $('#tuesdayBtn').click(function(){
 //nested the fetch function inside so that it will be trigger everytime we press the generate button 
 $.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tywin+lannister',
+    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffery+baratheon',
     // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
 method: 'GET',
 
@@ -201,7 +201,7 @@ success : function(data){
     //this is how we create an image with the url as source
     var img = $('<img>').attr('src', gifUrl);
     //allows us to append ! 
-    $('#tywinQuote').append(img);
+    $('#jofferyQuote').append(img);
     
     
 },
