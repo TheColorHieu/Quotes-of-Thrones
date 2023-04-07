@@ -21,7 +21,7 @@ const today = dayjs().format("dddd");
 const currentTime = dayjs().hour();
 
 
-const weekdays ={
+const weekday ={
     monday: {
       quote: "https://api.gameofthronesquotes.xyz/v1/author/tyrion/2",
       image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister",
