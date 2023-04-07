@@ -69,3 +69,13 @@ p{
     justify-content: center;
     align-items: center;
   }
+
+  #timeHeader{
+    font-family: "Game of Thrones";
+    font-size:25px;
+    padding-bottom: 2%;
+    color:#d69209e6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

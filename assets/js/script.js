@@ -16,6 +16,13 @@ const arya = 'https://api.gameofthronesquotes.xyz/v1/author/arya/2'
 const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
 const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
 
+
+const today = dayjs().format("dddd");
+const currentTime = dayjs().hour();
+//prints header using jquerry
+$("h2").append(today);
+
+
 const savedQuote = localStorage.getItem('tyrionQuote')
 if (savedQuote) {
     tyrionQuote.textContent = savedQuote;
@@ -361,7 +368,7 @@ $(document).ready(function () {
 
         })
     })
-    
+
     //added functionality of reset button by clearing local storage and reloading page
     $(document).ready(function() {
         $("#resetBtn").click(function() {
