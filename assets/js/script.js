@@ -8,48 +8,39 @@ const aryaQuote = document.querySelector('#aryaQuote');
 const jaimeQuote = document.querySelector('#jaimeQuote');
 const cerseiQuote = document.querySelector('#cerseiQuote');
 
-const tyrion = 'https://api.gameofthronesquotes.xyz/v1/author/tyrion/2'
-const joffrey = 'https://api.gameofthronesquotes.xyz/v1/author/joffrey/2'
-const daenerys = 'https://api.gameofthronesquotes.xyz/v1/author/daenerys/2'
-const jon = 'https://api.gameofthronesquotes.xyz/v1/author/jon/2'
-const arya = 'https://api.gameofthronesquotes.xyz/v1/author/arya/2'
-const jaime = 'https://api.gameofthronesquotes.xyz/v1/author/jaime/2'
-const cersei = 'https://api.gameofthronesquotes.xyz/v1/author/cersei/2'
-
-const weekday ={
+const weekday = {
     monday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/tyrion/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/tyrion/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister",
     },
     tuesday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/joffrey/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffrey+baratheon",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/joffrey/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffrey+baratheon",
     },
     wednesday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/daenerys/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=daenerys+targaryen",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/daenerys/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=daenerys+targaryen",
     },
     thursday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/jon/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jon+snow",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/jon/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jon+snow",
     },
     friday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/arya/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=arya+stark",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/arya/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=arya+stark",
     },
     saturday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/jaime/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jaime+lannister",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/jaime/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jaime+lannister",
     },
     sunday: {
-      quote: "https://api.gameofthronesquotes.xyz/v1/author/cersei/2",
-      image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=cersei+lannister",
-    },
-
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/cersei/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=cersei+lannister",
+    }
+}
 
 const today = dayjs().format("dddd");
 const currentTime = dayjs().hour();
-//prints header using jquerry
 $("h2").append(today);
 
 
@@ -192,31 +183,18 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $('#tuesdayBtn').click(function(){
-//nested the fetch function inside so that it will be trigger everytime we press the generate button 
-$.ajax({
-    url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffery+baratheon',
-    // url:'https://api.giphy.com/v1/gifs/?q=tyrion+lannister&api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&limit=1',
-method: 'GET',
+    $('#tuesdayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffery+baratheon',
+            method: 'GET',
 
-success : function(data){
-    //our success is working 
-    console.log(data);
-    //this is how we get the url of the first gif 
-    var gifUrl = data.data.images.original.url;
-    //this is how we create an image with the url as source
-    var img = $('<img>').attr('src', gifUrl);
-    //allows us to append ! 
-    $('#jofferyQuote').append(img);
-    
-    
-},
-//our error is currently working 
-error: function(error){
-    //testing to see if its not working 
-    console.error(error);
-}
-
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#jofferyQuote').append(img);
+            },
+            error: function (error) {
+            }
 
         })
     })
