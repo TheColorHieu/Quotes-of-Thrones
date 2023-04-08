@@ -39,6 +39,22 @@ const weekday = {
     }
 }
 
+const mondayQuote = weekday.monday.quote
+const tuesdayQuote = weekday.tuesday.quote
+const wednesdayQuote = weekday.wednesday.quote
+const thursdayQuote = weekday.thursday.quote
+const fridayQuote = weekday.friday.quote
+const saturdayQuote = weekday.saturday.quote
+const sundayQuote = weekday.sunday.quote
+
+const mondayImg = weekday.monday.image
+const tuesdayImg = weekday.tuesday.image
+const wednesdayImg = weekday.wednesday.image
+const thursdayImg = weekday.thursday.image
+const fridayImg = weekday.friday.image
+const saturdayImg = weekday.saturday.image
+const sundayImg = weekday.sunday.image
+
 const today = dayjs().format("dddd");
 const currentTime = dayjs().hour();
 $("h2").append(today);
@@ -50,8 +66,7 @@ if (savedQuote) {
 }
 $("#mondayBtn").on("click", function (event) {
     event.preventDefault();
-    const mondayQuote = weekday.monday.quote;
-    fetch(mondayQuote)
+        fetch(mondayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -59,6 +74,18 @@ $("#mondayBtn").on("click", function (event) {
             localStorage.setItem('tyrionQuote', quote);
         })
         .then(function (data) {
+        })
+    
+    fetch(mondayImg)
+    .then(response => response.json())
+    .then(data => {
+            const gifUrl = data.data.images.original.url;
+            const img = $('<img>').attr('src', gifUrl);
+            $('#tyrionQuote').append(img);
+        })
+        
+        .then(function (error) {
+            console.error(error);
         })
         
 });
@@ -69,7 +96,7 @@ if (savedQuote1) {
 }
 $("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
-    const tuesdayQuote = weekday.monday.quote
+        
     fetch(tuesdayQuote)
         .then(response => response.json())
         .then(data => {
@@ -78,6 +105,18 @@ $("#tuesdayBtn").on("click", function (event) {
             localStorage.setItem('joffreyQuote', quote);
         })
         .then(function (data) {
+        })
+    
+        fetch(tuesdayImg)
+    .then(response => response.json())
+    .then(data => {
+            const gifUrl = data.data.images.original.url;
+            const img = $('<img>').attr('src', gifUrl);
+            $('#joffreyQuote').append(img);
+        })
+        
+        .then(function (error) {
+            console.error(error);
         })
 })
 
@@ -97,6 +136,18 @@ $("#wednesdayBtn").on("click", function (event) {
         })
         .then(function (data) {
         })
+
+        fetch(wednesdayImg)
+        .then(response => response.json())
+        .then(data => {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#daenerysQuote').append(img);
+            })
+            
+            .then(function (error) {
+                console.error(error);
+            })
 })
 
 const savedQuote3 = localStorage.getItem('jonQuote')
@@ -115,6 +166,18 @@ $("#thursdayBtn").on("click", function (event) {
         })
         .then(function (data) {
         })
+
+        fetch(thursdayImg)
+        .then(response => response.json())
+        .then(data => {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#jonQuote').append(img);
+            })
+            
+            .then(function (error) {
+                console.error(error);
+            })
 })
 
 const savedQuote4 = localStorage.getItem('aryaQuote')
@@ -133,6 +196,18 @@ $("#fridayBtn").on("click", function (event) {
         })
         .then(function (data) {
         })
+
+        fetch(fridayImg)
+        .then(response => response.json())
+        .then(data => {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#aryaQuote').append(img);
+            })
+            
+            .then(function (error) {
+                console.error(error);
+            })
 })
 
 const savedQuote5 = localStorage.getItem('jaimeQuote')
@@ -151,6 +226,18 @@ $("#saturdayBtn").on("click", function (event) {
         })
         .then(function (data) {
         })
+
+        fetch(saturdayImg)
+        .then(response => response.json())
+        .then(data => {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#jaimeQuote').append(img);
+            })
+            
+            .then(function (error) {
+                console.error(error);
+            })
 })
 
 const savedQuote6 = localStorage.getItem('cerseiQuote')
@@ -169,10 +256,125 @@ $("#sundayBtn").on("click", function (event) {
         })
         .then(function (data) {
         })
+
+        fetch(sundayImg)
+        .then(response => response.json())
+        .then(data => {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#cerseiQuote').append(img);
+            })
+            
+            .then(function (error) {
+                console.error(error);
+            })
+})
+(document).ready(function () {
+    $('#tuesdayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffery+baratheon',
+            method: 'GET',
+
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#jofferyQuote').append(img);
+            },
+            error: function (error) {
+            }
+
+        })
+    })
 })
 
+$(document).ready(function () {
+    $('#wednesdayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=daenerys+targaryen',
+            method: 'GET',
 
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#daenerysQuote').append(img);
+            },
+            error: function (error) {
+            }
 
+        })
+    })
+})
+
+$(document).ready(function () {
+    $('#thursdayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jon+snow',
+            method: 'GET',
+
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#jonQuote').append(img);
+            },
+            error: function (error) {
+            }
+
+        })
+    })
+})
+
+$(document).ready(function () {
+    $('#fridayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=arya+stark',
+            method: 'GET',
+
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#aryaQuote').append(img);
+            },
+            error: function (error) {
+            }
+
+        })
+    })
+})
+
+$(document).ready(function () {
+    $('#saturdayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jaime+lannister',
+            method: 'GET',
+
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#jaimeQuote').append(img);
+            },
+            error: function (error) {
+            }
+
+        })
+    })
+})
+
+$(document).ready(function () {
+    $('#sundayBtn').click(function () {
+        $.ajax({
+            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=cersei+lannister',
+            method: 'GET',
+
+            success: function (data) {
+                const gifUrl = data.data.images.original.url;
+                const img = $('<img>').attr('src', gifUrl);
+                $('#cerseiQuote').append(img);
+            },
+            error: function (error) {
+            }
+
+        })
+    })
     $(document).ready(function () {
         $("#resetBtn").click(function () {
             localStorage.clear();
