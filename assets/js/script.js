@@ -1,7 +1,7 @@
 const apiKey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
 const tyrionQuote = document.querySelector('#tyrionQuote');
-const joffreyQuote = document.querySelector('#jofferyQuote');
+const joffreyQuote = document.querySelector('#joffreyQuote');
 const daenerysQuote = document.querySelector('#daenerysQuote');
 const jonQuote = document.querySelector('#jonQuote');
 const aryaQuote = document.querySelector('#aryaQuote');
@@ -77,8 +77,8 @@ $("#mondayBtn").on("click", function (event) {
         })
     
     fetch(mondayImg)
-    .then(response => response.json())
-    .then(data => {
+        .then(response => response.json())
+        .then(data => {
             const gifUrl = data.data.images.original.url;
             const img = $('<img>').attr('src', gifUrl);
             $('#tyrionQuote').append(img);
@@ -92,7 +92,7 @@ $("#mondayBtn").on("click", function (event) {
 
 const savedQuote1 = localStorage.getItem('joffreyQuote')
 if (savedQuote1) {
-    jofferyQuote.textContent = savedQuote1;
+    joffreyQuote.textContent = savedQuote1;
 }
 $("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
@@ -101,15 +101,15 @@ $("#tuesdayBtn").on("click", function (event) {
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
-            jofferyQuote.textContent = quote;
+            joffreyQuote.textContent = quote;
             localStorage.setItem('joffreyQuote', quote);
         })
         .then(function (data) {
         })
     
-        fetch(tuesdayImg)
-    .then(response => response.json())
-    .then(data => {
+    fetch(tuesdayImg)
+        .then(response => response.json())
+        .then(data => {
             const gifUrl = data.data.images.original.url;
             const img = $('<img>').attr('src', gifUrl);
             $('#joffreyQuote').append(img);
@@ -137,7 +137,7 @@ $("#wednesdayBtn").on("click", function (event) {
         .then(function (data) {
         })
 
-        fetch(wednesdayImg)
+    fetch(wednesdayImg)
         .then(response => response.json())
         .then(data => {
                 const gifUrl = data.data.images.original.url;
@@ -167,7 +167,7 @@ $("#thursdayBtn").on("click", function (event) {
         .then(function (data) {
         })
 
-        fetch(thursdayImg)
+    fetch(thursdayImg)
         .then(response => response.json())
         .then(data => {
                 const gifUrl = data.data.images.original.url;
@@ -197,7 +197,7 @@ $("#fridayBtn").on("click", function (event) {
         .then(function (data) {
         })
 
-        fetch(fridayImg)
+    fetch(fridayImg)
         .then(response => response.json())
         .then(data => {
                 const gifUrl = data.data.images.original.url;
@@ -227,7 +227,7 @@ $("#saturdayBtn").on("click", function (event) {
         .then(function (data) {
         })
 
-        fetch(saturdayImg)
+    fetch(saturdayImg)
         .then(response => response.json())
         .then(data => {
                 const gifUrl = data.data.images.original.url;
@@ -257,7 +257,7 @@ $("#sundayBtn").on("click", function (event) {
         .then(function (data) {
         })
 
-        fetch(sundayImg)
+    fetch(sundayImg)
         .then(response => response.json())
         .then(data => {
                 const gifUrl = data.data.images.original.url;
@@ -269,113 +269,8 @@ $("#sundayBtn").on("click", function (event) {
                 console.error(error);
             })
 })
-(document).ready(function () {
-    $('#tuesdayBtn').click(function () {
-        $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffery+baratheon',
-            method: 'GET',
-
-            success: function (data) {
-                const gifUrl = data.data.images.original.url;
-                const img = $('<img>').attr('src', gifUrl);
-                $('#jofferyQuote').append(img);
-            },
-            error: function (error) {
-            }
-
-        })
-    })
-})
 
 $(document).ready(function () {
-    $('#wednesdayBtn').click(function () {
-        $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=daenerys+targaryen',
-            method: 'GET',
-
-            success: function (data) {
-                const gifUrl = data.data.images.original.url;
-                const img = $('<img>').attr('src', gifUrl);
-                $('#daenerysQuote').append(img);
-            },
-            error: function (error) {
-            }
-
-        })
-    })
-})
-
-$(document).ready(function () {
-    $('#thursdayBtn').click(function () {
-        $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jon+snow',
-            method: 'GET',
-
-            success: function (data) {
-                const gifUrl = data.data.images.original.url;
-                const img = $('<img>').attr('src', gifUrl);
-                $('#jonQuote').append(img);
-            },
-            error: function (error) {
-            }
-
-        })
-    })
-})
-
-$(document).ready(function () {
-    $('#fridayBtn').click(function () {
-        $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=arya+stark',
-            method: 'GET',
-
-            success: function (data) {
-                const gifUrl = data.data.images.original.url;
-                const img = $('<img>').attr('src', gifUrl);
-                $('#aryaQuote').append(img);
-            },
-            error: function (error) {
-            }
-
-        })
-    })
-})
-
-$(document).ready(function () {
-    $('#saturdayBtn').click(function () {
-        $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=jaime+lannister',
-            method: 'GET',
-
-            success: function (data) {
-                const gifUrl = data.data.images.original.url;
-                const img = $('<img>').attr('src', gifUrl);
-                $('#jaimeQuote').append(img);
-            },
-            error: function (error) {
-            }
-
-        })
-    })
-})
-
-$(document).ready(function () {
-    $('#sundayBtn').click(function () {
-        $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=cersei+lannister',
-            method: 'GET',
-
-            success: function (data) {
-                const gifUrl = data.data.images.original.url;
-                const img = $('<img>').attr('src', gifUrl);
-                $('#cerseiQuote').append(img);
-            },
-            error: function (error) {
-            }
-
-        })
-    })
-    $(document).ready(function () {
         $("#resetBtn").click(function () {
             localStorage.clear();
             location.reload();
