@@ -50,7 +50,8 @@ if (savedQuote) {
 }
 $("#mondayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(tyrion)
+    const mondayQuote = weekday.monday.quote;
+    fetch(mondayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -59,6 +60,7 @@ $("#mondayBtn").on("click", function (event) {
         })
         .then(function (data) {
         })
+        
 });
 
 const savedQuote1 = localStorage.getItem('joffreyQuote')
@@ -67,7 +69,8 @@ if (savedQuote1) {
 }
 $("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(joffrey)
+    const tuesdayQuote = weekday.monday.quote
+    fetch(tuesdayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -84,7 +87,8 @@ if (savedQuote2) {
 }
 $("#wednesdayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(daenerys)
+    const wednesdayQuote = weekday.wednesday.quote
+    fetch(wednesdayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -101,7 +105,8 @@ if (savedQuote3) {
 }
 $("#thursdayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(jon)
+    const thursdayQuote = weekday.thursday.quote
+    fetch(thursdayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -118,7 +123,8 @@ if (savedQuote4) {
 }
 $("#fridayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(arya)
+    const fridayQuote = weekday.friday.quote
+    fetch(fridayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -135,7 +141,8 @@ if (savedQuote5) {
 }
 $("#saturdayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(jaime)
+    const saturdayQuote = weekday.saturday.quote
+    fetch(saturdayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
@@ -152,7 +159,8 @@ if (savedQuote6) {
 }
 $("#sundayBtn").on("click", function (event) {
     event.preventDefault();
-    fetch(cersei)
+    const sundayQuote = weekday.sunday.quote
+    fetch(sundayQuote)
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
