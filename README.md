@@ -30,3 +30,4 @@ gifs API, quotes API, bulma CSS framework and jquery.
 
 # Link 
 
+https://thecolorhieu.github.io/Quotes-of-Thrones/
