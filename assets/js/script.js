@@ -116,7 +116,7 @@ $("#tuesdayBtn").on("click", function (event) {
         })
         
         .then(function (error) {
-            
+            console.error(error);
         })
 })
 
