@@ -1,7 +1,7 @@
 const apiKey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
 const tyrionQuote = document.querySelector('#tyrionQuote');
-const joffreyQuote = document.querySelector('#baelishQuote');
+const baelishQuote = document.querySelector('#baelishQuote');
 const daenerysQuote = document.querySelector('#daenerysQuote');
 const jonQuote = document.querySelector('#jonQuote');
 const aryaQuote = document.querySelector('#aryaQuote');
