@@ -1,7 +1,7 @@
 const apiKey = 'XdKAq0Iih87Sx83LInGdrQgoMit3ALUH'
 
 const tyrionQuote = document.querySelector('#tyrionQuote');
-const joffreyQuote = document.querySelector('#joffreyQuote');
+const joffreyQuote = document.querySelector('#baelishQuote');
 const daenerysQuote = document.querySelector('#daenerysQuote');
 const jonQuote = document.querySelector('#jonQuote');
 const aryaQuote = document.querySelector('#aryaQuote');
@@ -14,8 +14,8 @@ const weekday = {
         image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=tyrion+lannister",
     },
     tuesday: {
-        quote: "https://api.gameofthronesquotes.xyz/v1/author/joffrey/2",
-        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=joffrey+baratheon",
+        quote: "https://api.gameofthronesquotes.xyz/v1/author/baelish/2",
+        image: "https://api.giphy.com/v1/gifs/random?api_key=XdKAq0Iih87Sx83LInGdrQgoMit3ALUH&tag=petyr+baelish",
     },
     wednesday: {
         quote: "https://api.gameofthronesquotes.xyz/v1/author/daenerys/2",
@@ -72,9 +72,9 @@ $("#mondayBtn").on("click", function (event) {
         })
 });
 
-const savedQuote1 = localStorage.getItem('joffreyQuote')
+const savedQuote1 = localStorage.getItem('baelishQuote')
 if (savedQuote1) {
-    joffreyQuote.textContent = savedQuote1;
+    baelishQuote.textContent = savedQuote1;
 }
 $("#tuesdayBtn").on("click", function (event) {
     event.preventDefault();
@@ -83,8 +83,8 @@ $("#tuesdayBtn").on("click", function (event) {
         .then(response => response.json())
         .then(data => {
             const quote = data[0].sentence;
-            joffreyQuote.textContent = quote;
-            localStorage.setItem('joffreyQuote', quote);
+            baelishQuote.textContent = quote;
+            localStorage.setItem('baelishQuote', quote);
         })
         .then(function (data) {
         })
@@ -95,7 +95,7 @@ $("#tuesdayBtn").on("click", function (event) {
         .then(data => {
             const gifUrl = data.data.images.original.url;
             const img = $('<img>').attr('src', gifUrl);
-            $('#joffreyQuote').append(img);
+            $('#baelishQuote').append(img);
         })
 });
 
