@@ -8,6 +8,18 @@ p {
     padding-top: 2%;
 }
 
+@font-face {
+    font-family: "Game Of Thrones";
+    src: url("../font/Game\ of\ Thrones.ttf");
+}
+
+img{
+    max-width:20%;
+    max-height:20%;
+    padding-left:2%;
+  
+}
+
 #mainHeader {
     font-family: "Game of Thrones";
     padding-top: 2%;
@@ -79,7 +91,5 @@ p {
     background-color: #3d0202;
 }
 
-@font-face {
-    font-family: "Game Of Thrones";
-    src: url("../font/Game\ of\ Thrones.ttf");
-}
+
+
